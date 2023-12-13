@@ -1,5 +1,7 @@
 import streamlit as st
+import pandas as pd
 import joblib
+
 data = pd.read_csv("https://gist.githubusercontent.com/khikisb/db966a30f5341a31d8429885ad522e82/raw/90e5bdecaa24a3bf1a0a4f45b70d51274e7a337f/data_label_news.csv")
 data = data.reset_index(drop=True)
 df = data[['Content', 'Label']]
