@@ -2,17 +2,17 @@ import streamlit as st
 import joblib
 
 # Memuat kembali fungsi-fungsi preprocessing
-clean_punct = joblib.load('clean_punct_function.joblib')
-tokenize_text = joblib.load('tokenize_text_function.joblib')
-remove_stopwords = joblib.load('remove_stopwords_function.joblib')
+clean_punct = joblib.load('model/clean_punct_function.joblib')
+tokenize_text = joblib.load('model/tokenize_text_function.joblib')
+remove_stopwords = joblib.load('model/remove_stopwords_function.joblib')
 
 # Memuat kembali model TF-IDF, LDA, dan KNN
-tfidf_model = joblib.load('tfidf_model.joblib')
-lda_model = joblib.load('lda_model.joblib')
-knn_model = joblib.load('knn_model.joblib')
+tfidf_model = joblib.load('model/tfidf_model.joblib')
+lda_model = joblib.load('model/lda_model.joblib')
+knn_model = joblib.load('model/knn_model.joblib')
 
 # Mendefinisikan aplikasi Streamlit
-st.title('Aplikasi Prediksi')
+st.title('Aplikasi Prediksi Klasifikasi Berita')
 user_input = st.text_area('Masukkan teks')
 
 # Fungsi untuk melakukan prediksi pada teks baru
